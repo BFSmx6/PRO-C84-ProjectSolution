@@ -145,14 +145,14 @@ export default class RideHistoryScreen extends Component {
             <TextInput
               style={styles.textinput}
               onChangeText={text => this.setState({ searchText: text })}
-              placeholder={"Type here"}
+              placeholder={"Escribe aquí"}
               placeholderTextColor={"#FFFFFF"}
             />
             <TouchableOpacity
               style={styles.scanbutton}
               onPress={() => this.handleSearch(searchText)}
             >
-              <Text style={styles.scanbuttonText}>Search</Text>
+              <Text style={styles.scanbuttonText}>Buscar</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -161,7 +161,7 @@ export default class RideHistoryScreen extends Component {
             data={allTransactions}
             renderItem={this.renderItem}
             keyExtractor={(item, index) => index.toString()}
-            /**following 2 Props***/
+            /**siguientes 2 Props***/
             onEndReached={() => this.fetchMoreTransactions(searchText)}
             onEndReachedThreshold={0.7}
           />
